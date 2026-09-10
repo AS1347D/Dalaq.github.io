@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder laboratory photograph">
+  <!-- REPLACE: laboratory / equipment photograph (4:3, 1200x900 px recommended) -->
+  <g stroke="#7d8790" fill="none" stroke-width="1" opacity="0.5">
+    <path d="M120 460 h560 M120 460 V220 h180 v240 M300 220 h140 v240 M440 300 h240 v160"/>
+    <path d="M160 260 h100 M160 300 h100 M160 340 h100 M340 260 h60 v60 h-60z"/>
+    <circle cx="560" cy="380" r="46"/><path d="M560 334 v92 M514 380 h92"/>
+    <path d="M120 220 l90-60 h180 M440 300 l60-40 h180 v200"/>
+  </g>
+  <g fill="#7d8790" opacity="0.7"><circle cx="560" cy="380" r="6"/><circle cx="370" cy="290" r="5"/></g>
+  <text x="400" y="556" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#7d8790"
+        opacity="0.8" text-anchor="middle" letter-spacing="3">LAB PHOTO PLACEHOLDER</text>
+</svg>

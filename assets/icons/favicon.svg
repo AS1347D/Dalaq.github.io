@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Lab mark">
+  <title>Applied Mechanics and Bioinspired Systems</title>
+  <!-- The lab mark: a cubic stress element.
+
+       An isometric cube: three rhombic faces meeting at the near vertex,
+       shaded light / mid / dark so the block reads as solid, with one normal
+       traction arrow out of each visible face, pointing outward.
+
+       Geometry: a hexagon of radius 6.2 about (16,16), vertices every 30 deg;
+       the near vertex is the centre. The group is nudged down 1.9 and scaled
+       1.22 about the centre so the mark fills the rounded square.
+
+       The tractions are drawn twice: once in the background navy as a thick
+       halo, then in near-white on top. The halo cuts the arrows away from the
+       cube so they still read at 16 px. Keep the two path sets identical.
+
+       Recolour: the three face fills and the traction colour below. -->
+  <rect width="32" height="32" rx="5" fill="#0c1a2b"/>
+
+  <g transform="translate(16 17.9) scale(1.22) translate(-16 -16)">
+
+    <!-- the element: top face lit, right face mid, left face in shade -->
+    <g stroke="#0c1a2b" stroke-width="0.7" stroke-linejoin="round">
+      <path d="M16 16 L21.37 12.9 L16 9.8 L10.63 12.9 Z" fill="#7cc0f7"/>
+      <path d="M16 16 L21.37 12.9 L21.37 19.1 L16 22.2 Z" fill="#3f83c9"/>
+      <path d="M16 16 L10.63 12.9 L10.63 19.1 L16 22.2 Z" fill="#24557f"/>
+    </g>
+
+    <!-- normal tractions, halo pass: same paths in the background navy -->
+    <g stroke="#0c1a2b" fill="#0c1a2b" stroke-width="2.6"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 12.9 V8.8"/>
+      <polygon points="16,6.0 14.7,8.9 17.3,8.9"/>
+      <path d="M18.685 17.55 L23.02 20.05"/>
+      <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+      <g transform="translate(32 0) scale(-1 1)">
+        <path d="M18.685 17.55 L23.02 20.05"/>
+        <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+      </g>
+    </g>
+
+    <!-- normal tractions, drawn pass -->
+    <g stroke="#f2f7fc" fill="#f2f7fc" stroke-width="1.15"
+       stroke-linecap="round" stroke-linejoin="round">
+      <!-- top face, normal straight up -->
+      <path d="M16 12.9 V8.8"/>
+      <polygon points="16,6.0 14.7,8.9 17.3,8.9" stroke="none"/>
+
+      <!-- right face, normal along the isometric x axis -->
+      <path d="M18.685 17.55 L23.02 20.05"/>
+      <polygon points="24.75,21.05 22.37,21.18 23.67,18.92" stroke="none"/>
+
+      <!-- left face: the right arrow mirrored about x = 16 -->
+      <g transform="translate(32 0) scale(-1 1)">
+        <path d="M18.685 17.55 L23.02 20.05"/>
+        <polygon points="24.75,21.05 22.37,21.18 23.67,18.92" stroke="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

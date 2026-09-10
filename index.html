@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab of Applied Mechanics and Bioinspired Systems</title>
+<meta name="description" content="Learning from nature, understanding mechanics, and translating fundamental principles into materials, structures and systems with real-world impact.">
+<meta name="author" content="Lab of Applied Mechanics and Bioinspired Systems">
+<meta name="color-scheme" content="light dark">
+
+<!-- REPLACE: set your published address, e.g. https://your-user.github.io/lab-website/ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lab of Applied Mechanics and Bioinspired Systems">
+<meta property="og:description" content="Learning from nature, understanding mechanics, and translating fundamental principles into materials, structures and systems with real-world impact.">
+<!-- REPLACE: add a 1200x630 png at assets/images/social-card.png and uncomment
+<meta property="og:image" content="assets/images/social-card.png">
+-->
+
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  /* Applies the stored theme before first paint so the page never flashes. */
+  (function () {
+    try {
+      var stored = localStorage.getItem('lambs-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+    } catch (e) { /* storage blocked: fall back to the system preference */ }
+    document.documentElement.classList.remove('no-js');
+
+    /* Only hide the scroll-reveal elements when this script is alive AND the
+       browser can observe them. If either is false they simply stay visible,
+       so a failed observer can never leave content invisible. */
+    if ('IntersectionObserver' in window &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-reveal');
+    }
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ==========================================================================
+     ICON SPRITE: every icon used on the site, defined once, inlined so the
+     pages also work when opened directly from disk (file://).
+     ========================================================================== -->
+<svg class="visually-hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M12 3L1.5 8.5 12 14l10.5-5.5L12 3z"/><path d="M5.5 11v5.2c0 2 3.3 3.3 6.5 3.3s6.5-1.3 6.5-3.3V11"/><path d="M21.4 9.2v5"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M9 9.5v7"/><circle cx="9" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M12.6 16.5v-7h2.1a3.5 3.5 0 0 1 0 7h-2.1z"/></symbol>
+  <symbol id="i-rg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M8.4 16V8.4h2.3a2 2 0 0 1 0 4H8.4M10.7 12.4L13 16"/><path d="M16.2 9.4a2 2 0 0 0-2.9 1.7v1.8a2 2 0 0 0 2.9 1.7v-2h-1"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.4 17v-6.5M11.4 13.2c0-1.6 1-2.7 2.5-2.7s2.6 1 2.6 2.9V17"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v18H5.5A1.5 1.5 0 0 1 4 19.5z"/><path d="M8 3v18M19 17H5.5"/></symbol>
+  <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1.8 1.8 0 0 1-1.8 1.8H5A1.8 1.8 0 0 1 3.2 19V7.8A1.8 1.8 0 0 1 5 6h5"/></symbol>
+</svg>
+
+<!-- ==========================================================================
+     HEADER / NAVIGATION
+     The same markup appears on every page. If you add a page, add a <li> here
+     and copy it into the other HTML files.
+     ========================================================================== -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+
+      <a class="brand" href="index.html">
+        <!-- Lab mark: a cubic stress element with the second-order tensor
+             symbol. Same geometry as assets/icons/favicon.svg, scaled 1.62 and
+             without the rounded plate, since the header band is already navy.
+             Colours live in css/style.css under .brand__mark. -->
+        <svg class="brand__mark" viewBox="0 0 46 32" aria-hidden="true">
+          <g transform="translate(16 16) scale(1.62) translate(-16 -14.1)">
+            <g class="bm-seam">
+              <path class="bm-top" d="M16 16 L21.37 12.9 L16 9.8 L10.63 12.9 Z"/>
+              <path class="bm-right" d="M16 16 L21.37 12.9 L21.37 19.1 L16 22.2 Z"/>
+              <path class="bm-left" d="M16 16 L10.63 12.9 L10.63 19.1 L16 22.2 Z"/>
+            </g>
+            <g class="bm-halo">
+              <path d="M16 12.9 V8.8"/>
+              <polygon points="16,6.0 14.7,8.9 17.3,8.9"/>
+              <path d="M18.685 17.55 L23.02 20.05"/>
+              <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              <g transform="translate(32 0) scale(-1 1)">
+                <path d="M18.685 17.55 L23.02 20.05"/>
+                <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              </g>
+            </g>
+            <g class="bm-tr">
+              <path d="M16 12.9 V8.8"/>
+              <polygon points="16,6.0 14.7,8.9 17.3,8.9"/>
+              <path d="M18.685 17.55 L23.02 20.05"/>
+              <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              <g transform="translate(32 0) scale(-1 1)">
+                <path d="M18.685 17.55 L23.02 20.05"/>
+                <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              </g>
+            </g>
+          </g>
+          <text class="bm-sym" x="38.6" y="17.6" text-anchor="middle">&#963;</text>
+          <path class="bm-bar" d="M33.8 21 H43.4 M33.8 24.2 H43.4"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">Applied Mechanics &amp; Bioinspired Systems</span>
+          <span class="brand__sub">Research Laboratory</span>
+        </span>
+      </a>
+
+      <ul class="nav__list" id="primary-nav">
+        <li><a class="nav__link" data-page="home" aria-current="page" href="index.html">Home</a></li>
+        <li><a class="nav__link" data-page="research" href="research.html">Research</a></li>
+        <li><a class="nav__link" data-page="people" href="people.html">People</a></li>
+        <li><a class="nav__link" data-page="publications" href="publications.html">Publications</a></li>
+        <li><a class="nav__link" data-page="impact" href="impact.html">Impact</a></li>
+        <li><a class="nav__link" data-page="teaching" href="teaching.html">Teaching</a></li>
+        <li><a class="nav__link" data-page="resources" href="resources.html">Resources</a></li>
+        <li><a class="nav__link" data-page="news" href="news.html">News</a></li>
+        <li><a class="nav__link" data-page="lab" href="lab.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__tools">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open navigation menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ==========================================================================
+     HERO
+     The backdrop is assets/images/hero-octagons.svg: the truncated square
+     tiling, octagons with the small squares that fall between them. The octagon
+     is the governing geometry of the page backdrops and the mind-map nodes.
+     ========================================================================== -->
+<section class="hero">
+  <img class="hero__bg" src="assets/images/hero-octagons.svg" alt="" aria-hidden="true"
+       width="1200" height="600" fetchpriority="high">
+
+  <div class="container hero__inner">
+    <div class="hero__grid">
+      <div>
+        <h1 class="hero__title">
+          <span class="thin">Research laboratory</span>
+          Applied Mechanics and Bioinspired Systems
+        </h1>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#ecosystem">See the research map</a>
+          <a class="btn btn--ghost" href="people.html">Meet the group</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="hero__equation">
+          <span>Mechanics</span><span class="x">&times;</span>
+          <span>Nature</span><span class="x">&times;</span>
+          <span>Materials</span><span class="x">&times;</span>
+          <span>Computation</span><span class="x">&times;</span>
+          <span>Intelligent systems</span>
+        </p>
+        <p class="lead hero__lead">
+          We learn from nature, work out the mechanics that make it function, and turn those
+          principles into materials, structures and systems that hold up in the real world.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     RESEARCH ECOSYSTEM: the interactive mind map (built by js/mindmap.js)
+     ========================================================================== -->
+<section class="section ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
+  <div class="container">
+
+    <div class="section__head">
+      <p class="eyebrow">Research ecosystem</p>
+      <h2 id="ecosystem-title">How the work fits together</h2>
+      <p class="lead">
+        Six research pillars, one shared method. Hover a node to preview it, select it to open the
+        areas underneath, or follow the link into the full description. Biomimetics is drawn as a
+        ring rather than a branch: it runs through every pillar instead of sitting beside them.
+      </p>
+    </div>
+
+    <div class="ecosystem__layout">
+
+      <div class="mindmap-wrap" data-mindmap>
+        <!-- The SVG map is injected here. This fallback shows when JavaScript is off. -->
+        <div class="mindmap-fallback">
+          <h3>Research pillars</h3>
+          <p class="muted">The interactive map needs JavaScript. The same structure is listed below.</p>
+          <ul>
+            <li><a href="research.html#bioinspired-mechanics">Bioinspired Mechanics &amp; Living Systems</a></li>
+            <li><a href="research.html#architected-materials">Architected Materials &amp; Structures</a></li>
+            <li><a href="research.html#adaptive-systems">Adaptive &amp; Intelligent Systems</a></li>
+            <li><a href="research.html#computational-mechanics">Computational Mechanics &amp; Design</a></li>
+            <li><a href="research.html#manufacturing-sustainability">Manufacturing &amp; Sustainable Materials</a></li>
+            <li><a href="research.html#biomedical-systems">Biomedical &amp; Human-Centred Systems</a></li>
+            <li><a href="research.html#ethics">Research Ethics &amp; Responsible Innovation</a></li>
+          </ul>
+        </div>
+        <p class="mindmap__hint">Hover or tap to preview &middot; select to expand &middot; arrow keys to move</p>
+      </div>
+
+      <aside class="mm-panel" data-mindmap-panel aria-live="polite" aria-label="Details of the selected research theme">
+        <!-- filled by js/mindmap.js -->
+      </aside>
+
+    </div>
+
+    <ul class="mm-legend">
+      <li><span class="dot"></span> Research pillar</li>
+      <li><span class="dot dot--hollow"></span> Selected research area</li>
+      <li><span class="dot dot--alt"></span> Ethics &amp; responsible innovation</li>
+      <li>Dashed ring: biomimetics, the method shared by every pillar</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PILLARS AT A GLANCE
+     ========================================================================== -->
+<section class="section section--alt" aria-labelledby="pillars-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Research pillars</p>
+      <h2 id="pillars-title">Six research pillars</h2>
+      <p class="lead">
+        How does form produce function: in tissue, in a folded sheet, in an interlocked
+        assembly, in a printed lattice? Each pillar answers it with different tools.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+
+      <article class="card pillar-card reveal" data-mindmap-focus="bioinspired-mechanics">
+        <p class="card__index">01</p>
+        <h3 class="card__title">Bioinspired Mechanics &amp; Living Systems</h3>
+        <p class="card__text">
+          Living matter treated as a mechanical system: tissue that heals, skeletons that breathe,
+          structures that grow into their loading.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">Wound healing</li>
+          <li class="chip">Avian breathing</li>
+          <li class="chip">Growth &amp; adaptation</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#bioinspired-mechanics">Running projects</a></p>
+      </article>
+
+      <article class="card pillar-card reveal" data-mindmap-focus="architected-materials">
+        <p class="card__index">02</p>
+        <h3 class="card__title">Architected Materials &amp; Structures</h3>
+        <p class="card__text">
+          Stiffness, strength and failure set by geometry rather than chemistry: interlocked blocks,
+          folded sheets, segmented protective shells.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">Interlocked materials</li>
+          <li class="chip">Origami mechanics</li>
+          <li class="chip">Protection</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#architected-materials">Running projects</a></p>
+      </article>
+
+      <article class="card pillar-card reveal" data-mindmap-focus="adaptive-systems">
+        <p class="card__index">03</p>
+        <h3 class="card__title">Adaptive &amp; Intelligent Systems</h3>
+        <p class="card__text">
+          Structures that sense, actuate, deploy and reconfigure: from origami robots to
+          adaptive facades and wearable architectures.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">Origami robotics</li>
+          <li class="chip">Deployables</li>
+          <li class="chip">Smart materials</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#adaptive-systems">Running projects</a></p>
+      </article>
+
+      <article class="card pillar-card reveal" data-mindmap-focus="computational-mechanics">
+        <p class="card__index">04</p>
+        <h3 class="card__title">Computational Mechanics &amp; Design</h3>
+        <p class="card__text">
+          Finite and discrete element models, nonlinear dynamics and topology optimisation used to
+          expose mechanisms and search design spaces.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">FEM</li>
+          <li class="chip">DEM</li>
+          <li class="chip">Topology optimisation</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#computational-mechanics">Running projects</a></p>
+      </article>
+
+      <article class="card pillar-card reveal" data-mindmap-focus="manufacturing-sustainability">
+        <p class="card__index">05</p>
+        <h3 class="card__title">Manufacturing &amp; Sustainable Materials</h3>
+        <p class="card__text">
+          Additive manufacturing, recycled feedstocks and process&ndash;structure&ndash;property
+          relations, with circularity treated as a design constraint.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">Additive manufacturing</li>
+          <li class="chip">Recycled materials</li>
+          <li class="chip">Circularity</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#manufacturing-sustainability">Running projects</a></p>
+      </article>
+
+      <article class="card pillar-card reveal" data-mindmap-focus="biomedical-systems">
+        <p class="card__index">06</p>
+        <h3 class="card__title">Biomedical &amp; Human-Centred Systems</h3>
+        <p class="card__text">
+          Implants, prostheses, healing patches and assistive devices: mechanics designed around
+          physiological loading and clinical reality.
+        </p>
+        <ul class="chips pillar-card__topics">
+          <li class="chip">Bone implants</li>
+          <li class="chip">Prosthetics</li>
+          <li class="chip">Biomaterials</li>
+        </ul>
+        <p class="card__foot"><a class="link-arrow" href="research.html#biomedical-systems">Running projects</a></p>
+      </article>
+
+    </div>
+
+    <div class="callout mt-6 reveal" data-mindmap-focus="ethics">
+      <h3>Research Ethics &amp; Responsible Innovation</h3>
+      <p class="card__text">
+        Present in every project, without being a pillar of its own. Borrowing from living systems and designing for the human
+        body raise questions that mechanics alone cannot settle, so responsible innovation is part
+        of how projects are framed here and something the lab publishes on.
+      </p>
+      <p><a class="link-arrow" href="research.html#ethics">The ethics project</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     APPROACH
+     ========================================================================== -->
+<section class="section" aria-labelledby="approach-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">How we work</p>
+      <h2 id="approach-title">One method across a wide portfolio</h2>
+      <p class="lead">
+        Wound healing and armour plating look unrelated until you notice that both are questions
+        about how geometry, interfaces and time govern the way a structure carries load. That is
+        the thread through everything in this lab.
+      </p>
+    </div>
+
+    <div class="grid grid--4">
+      <div class="card reveal">
+        <p class="card__index">i</p>
+        <h3 class="card__title">Mechanism first</h3>
+        <p class="card__text">
+          We start from the mechanism that makes something work: a contact, a fold, an
+          instability, a growth law and only then choose the material.
+        </p>
+      </div>
+      <div class="card reveal">
+        <p class="card__index">ii</p>
+        <h3 class="card__title">Nature as reference</h3>
+        <p class="card__text">
+          Biological systems are read as engineering solutions and abstracted into geometry and
+          mechanics. Inspiration has to survive being written as equations.
+        </p>
+      </div>
+      <div class="card reveal">
+        <p class="card__index">iii</p>
+        <h3 class="card__title">Model and make together</h3>
+        <p class="card__text">
+          Simulation, fabrication and testing run in the same loop; a model that has never been
+          printed and pushed until it fails is only half-finished.
+        </p>
+      </div>
+      <div class="card reveal">
+        <p class="card__index">iv</p>
+        <h3 class="card__title">Design for the whole life</h3>
+        <p class="card__text">
+          Manufacturability, sustainability and the human consequences of a device are treated as
+          design variables, not as things to check at the end.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FEATURED PROJECTS
+     ========================================================================== -->
+<section class="section section--alt" aria-labelledby="featured-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Projects</p>
+      <h2 id="featured-title">Selected projects</h2>
+      <p class="lead">Three lines of work that carry most of the group's effort.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="card__media">
+          <img src="assets/images/placeholder-wide.svg" alt="" width="800" height="450" loading="lazy"><!-- REPLACE: photo or render -->
+        </div>
+        <p class="card__meta">Biomimicry &middot; carbon capture</p>
+        <h3 class="card__title">Artificial lung for direct air carbon capture</h3>
+        <p class="card__text">
+          The one-directional flow architecture of the hummingbird lung, rebuilt at engineering
+          scale to pull carbon dioxide out of ambient air, backed by a US provisional patent.
+        </p>
+        <p class="card__foot"><a class="link-arrow" href="research.html#rp-lung">Project details</a></p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__media">
+          <img src="assets/images/placeholder-wide.svg" alt="" width="800" height="450" loading="lazy"><!-- REPLACE: photo or render -->
+        </div>
+        <p class="card__meta">Origami &middot; adaptive systems</p>
+        <h3 class="card__title">Kresling springs and origami metamaterials</h3>
+        <p class="card__text">
+          Folded cells whose geometry supplies the motion and the stiffness, carried into cushions,
+          energy absorbers, harvesters, self-resetting cartridges and a catheter adapter.
+        </p>
+        <p class="card__foot"><a class="link-arrow" href="research.html#rp-cartridge">Project details</a></p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__media">
+          <img src="assets/images/placeholder-wide.svg" alt="" width="800" height="450" loading="lazy"><!-- REPLACE: photo or render -->
+        </div>
+        <p class="card__meta">Architected materials &middot; segmentation</p>
+        <h3 class="card__title">Segmented and interlocked materials</h3>
+        <p class="card__text">
+          Blocks that interlock by shape rather than adhesive, so strength and toughness rise
+          together and a damaged element can be replaced one block at a time.
+        </p>
+        <p class="card__foot"><a class="link-arrow" href="research.html#rp-segmented">Project details</a></p>
+      </article>
+    </div>
+
+    <p class="mt-6"><a class="link-arrow" href="research.html">All projects</a></p>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     NEWS AND EVENTS
+     A digest of news.html plus the group's headline numbers.
+     ========================================================================== -->
+<section class="section" aria-labelledby="news-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Updates</p>
+      <h2 id="news-title">News &amp; events</h2>
+      <p class="lead">The scale of the group's work, and what has happened recently.</p>
+    </div>
+
+    <div class="acc-grid">
+      <div>
+        <h3 class="col-title">The group in numbers</h3>
+        <ul class="detail-list">
+          <li>
+            <span class="meta">Research</span>
+            <strong>Seven funded projects</strong> across the six pillars, with national and
+            institutional funders. <a href="research.html">Projects</a>
+          </li>
+          <li>
+            <span class="meta">Publications</span>
+            <strong>38 journal articles, a book chapter and 27 conference contributions.</strong>
+            <a href="publications.html">Full list</a>
+          </li>
+          <li>
+            <span class="meta">Teaching</span>
+            <strong>Seven courses at KFUPM,</strong> from BSc to PhD level.
+            <a href="teaching.html">Courses</a>
+          </li>
+          <li>
+            <span class="meta">People</span>
+            <strong>Two postdocs, four doctoral researchers, six MSc and undergraduate students.</strong>
+            <a href="people.html">Meet the group</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="col-title">News and events</h3>
+        <!-- Keep the nearest event first, then news newest-first. Mirror news.html. -->
+        <ul class="detail-list">
+          <li>
+            <span class="meta">November 2026</span>
+            <strong>ASME IMECE 2026, Vancouver.</strong> The group is attending the International
+            Mechanical Engineering Congress and Exposition, 8&ndash;12 November.
+            <a href="https://event.asme.org/IMECE" target="_blank" rel="noopener">Conference</a>
+          </li>
+          <li>
+            <span class="meta">March 2027</span>
+            <strong>BioBIS 2027 at KFUPM.</strong> Ahmed S. Dalaq is a Technical Program Chair;
+            abstracts due 15 October 2026.
+            <a href="https://bio-bis.com/en/committees" target="_blank" rel="noopener">Conference</a>
+          </li>
+          <li>
+            <span class="meta">2026</span>
+            <strong>Appointment.</strong> Ahmed S. Dalaq becomes Acting Director of the IRC for
+            Biosystems and Machines at KFUPM. <a href="people.html">The group</a>
+          </li>
+          <li>
+            <span class="meta">2026</span>
+            <strong>New grant.</strong> A project to rebuild transtibial prosthetic design around
+            digitalisation and generative design. <a href="research.html#rp-prosthetic">Project</a>
+          </li>
+          <li>
+            <span class="meta">2026</span>
+            <strong>New paper.</strong> An origami-inspired unit cell composed of intersecting
+            Kresling springs, in <em>Engineering Structures</em>.
+            <a href="publications.html">Publications</a>
+          </li>
+          <li>
+            <span class="meta">2025</span>
+            <strong>Patent filed.</strong> A US provisional application on the artificial lung for
+            direct air carbon capture. <a href="impact.html#patents">Patents</a>
+          </li>
+        </ul>
+        <p class="mt-6"><a class="link-arrow" href="news.html">All news</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==========================================================================
+     CALL TO ACTION
+     ========================================================================== -->
+<section class="section section--tight section--alt" aria-labelledby="cta-title">
+  <div class="container container--narrow center">
+    <h2 id="cta-title">Work with the lab</h2>
+    <p class="lead">
+      We collaborate with mechanicians, biologists, clinicians, architects and manufacturers, and we
+      supervise students at every level. If your question sits somewhere in the map above, get in touch.
+    </p>
+    <div class="hero__actions" style="justify-content:center">
+      <a class="btn btn--primary" href="lab.html#contact">Contact the lab</a>
+      <a class="btn btn--ghost" href="people.html#join">Join the group</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==========================================================================
+     FOOTER: identical on every page.
+     Institution, address and profile URLs are set. Only the GitHub URL is still a placeholder.
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div>
+        <p class="footer__name">Lab of Applied Mechanics and Bioinspired Systems</p>
+        <p class="footer__meta">
+
+          Bioengineering Department &middot; Building 7<br>
+          IRC for Biosystems and Machines &middot; Buildings 7 and 15 &middot; Dhahran Techno Valley<br>
+          KFUPM, Dhahran, Saudi Arabia
+        </p>
+        <ul class="social">
+          <li><a href="https://scholar.google.com/citations?user=P7IoxboAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar profile"><svg class="icon" aria-hidden="true"><use href="#i-scholar"></use></svg></a></li>
+          <li><a href="https://www.researchgate.net/profile/Ahmed-Dalaq" target="_blank" rel="noopener" aria-label="ResearchGate profile"><svg class="icon" aria-hidden="true"><use href="#i-rg"></use></svg></a></li>
+          <li><a href="https://orcid.org/0000-0002-3070-4215" target="_blank" rel="noopener" aria-label="ORCID record"><svg class="icon" aria-hidden="true"><use href="#i-orcid"></use></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/ahmeddalaq" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li>
+          <li><a href="mailto:ahmed.dalaq@kfupm.edu.sa" aria-label="Email the lab"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Research</h2>
+        <ul>
+          <li><a href="research.html#bioinspired-mechanics">Bioinspired mechanics</a></li>
+          <li><a href="research.html#architected-materials">Architected materials</a></li>
+          <li><a href="research.html#adaptive-systems">Adaptive systems</a></li>
+          <li><a href="research.html#computational-mechanics">Computational mechanics</a></li>
+          <li><a href="research.html#manufacturing-sustainability">Manufacturing &amp; sustainability</a></li>
+          <li><a href="research.html#biomedical-systems">Biomedical systems</a></li>
+          <li><a href="research.html#ethics">Ethics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>The lab</h2>
+        <ul>
+          <li><a href="people.html">People</a></li>
+          <li><a href="news.html">News &amp; events</a></li>
+          <li><a href="impact.html">Impact &amp; innovation</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resources.html">Open research</a></li>
+          <li><a href="lab.html">Facilities</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Join us</h2>
+        <ul>
+          <li><a href="people.html#phd">PhD opportunity</a></li>
+          <li><a href="people.html#postdoc">Postdoc opportunity</a></li>
+          <li><a href="lab.html#contact">Contact</a></li>
+          <li><a href="mailto:ahmed.dalaq@kfupm.edu.sa">ahmed.dalaq@kfupm.edu.sa</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span data-year>2026</span> Lab of Applied Mechanics and Bioinspired Systems. All rights reserved.</p>
+      <p>Static site &middot; no trackers &middot; <a href="#main">back to top</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/mindmap.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# OS and editor cruft, never useful in the published site
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+.vscode/
+.idea/
+
+# OneDrive / sync conflict copies
+*conflicted copy*

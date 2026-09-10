@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Placeholder portrait">
+  <!-- REPLACE: swap this file for a real photograph (square crop, 800x800 px or larger) -->
+  <g stroke="#7d8790" fill="none" stroke-width="1.1" opacity="0.55">
+    <path d="M200 96 l58 40 -22 68 -72 0 -22-68z"/>
+    <path d="M200 96 l36 108 M200 96 l-36 108 M142 136 l94 68 M258 136 l-94 68"/>
+    <path d="M84 400 c0-62 52-96 116-96 s116 34 116 96"/>
+    <path d="M128 400 l72-96 72 96 M200 304 v96"/>
+    <path d="M40 40 h48 M40 40 v48 M360 360 h-48 M360 360 v-48"/>
+  </g>
+  <g fill="#7d8790" opacity="0.85">
+    <circle cx="200" cy="96" r="4.5"/><circle cx="258" cy="136" r="3.5"/><circle cx="142" cy="136" r="3.5"/>
+    <circle cx="236" cy="204" r="3.5"/><circle cx="164" cy="204" r="3.5"/><circle cx="200" cy="304" r="4"/>
+  </g>
+  <text x="200" y="378" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#7d8790"
+        opacity="0.8" text-anchor="middle" letter-spacing="2">PHOTO PLACEHOLDER</text>
+</svg>

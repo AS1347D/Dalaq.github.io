@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News and events - Lab of Applied Mechanics and Bioinspired Systems</title>
+<meta name="description" content="Conferences, workshops and seminars the group is attending or organising, recent news, and an archive of past events.">
+<meta name="author" content="Lab of Applied Mechanics and Bioinspired Systems">
+<meta name="color-scheme" content="light dark">
+
+<!-- REPLACE: set your published address, e.g. https://your-user.github.io/lab-website/ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="News and events - Lab of Applied Mechanics and Bioinspired Systems">
+<meta property="og:description" content="Conferences, workshops and seminars the group is attending or organising, recent news, and an archive of past events.">
+<!-- REPLACE: add a 1200x630 png at assets/images/social-card.png and uncomment
+<meta property="og:image" content="assets/images/social-card.png">
+-->
+
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+  /* Applies the stored theme before first paint so the page never flashes. */
+  (function () {
+    try {
+      var stored = localStorage.getItem('lambs-theme');
+      if (stored) document.documentElement.setAttribute('data-theme', stored);
+    } catch (e) { /* storage blocked: fall back to the system preference */ }
+    document.documentElement.classList.remove('no-js');
+
+    /* Only hide the scroll-reveal elements when this script is alive AND the
+       browser can observe them. If either is false they simply stay visible,
+       so a failed observer can never leave content invisible. */
+    if ('IntersectionObserver' in window &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-reveal');
+    }
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ==========================================================================
+     ICON SPRITE: every icon used on the site, defined once, inlined so the
+     pages also work when opened directly from disk (file://).
+     ========================================================================== -->
+<svg class="visually-hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M12 3L1.5 8.5 12 14l10.5-5.5L12 3z"/><path d="M5.5 11v5.2c0 2 3.3 3.3 6.5 3.3s6.5-1.3 6.5-3.3V11"/><path d="M21.4 9.2v5"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M9 9.5v7"/><circle cx="9" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M12.6 16.5v-7h2.1a3.5 3.5 0 0 1 0 7h-2.1z"/></symbol>
+  <symbol id="i-rg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M8.4 16V8.4h2.3a2 2 0 0 1 0 4H8.4M10.7 12.4L13 16"/><path d="M16.2 9.4a2 2 0 0 0-2.9 1.7v1.8a2 2 0 0 0 2.9 1.7v-2h-1"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.4 17v-6.5M11.4 13.2c0-1.6 1-2.7 2.5-2.7s2.6 1 2.6 2.9V17"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v18H5.5A1.5 1.5 0 0 1 4 19.5z"/><path d="M8 3v18M19 17H5.5"/></symbol>
+  <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1.8 1.8 0 0 1-1.8 1.8H5A1.8 1.8 0 0 1 3.2 19V7.8A1.8 1.8 0 0 1 5 6h5"/></symbol>
+</svg>
+
+<!-- ==========================================================================
+     HEADER / NAVIGATION
+     The same markup appears on every page. If you add a page, add a <li> here
+     and copy it into the other HTML files.
+     ========================================================================== -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+
+      <a class="brand" href="index.html">
+        <!-- Lab mark: a cubic stress element with the second-order tensor
+             symbol. Same geometry as assets/icons/favicon.svg, scaled 1.62 and
+             without the rounded plate, since the header band is already navy.
+             Colours live in css/style.css under .brand__mark. -->
+        <svg class="brand__mark" viewBox="0 0 46 32" aria-hidden="true">
+          <g transform="translate(16 16) scale(1.62) translate(-16 -14.1)">
+            <g class="bm-seam">
+              <path class="bm-top" d="M16 16 L21.37 12.9 L16 9.8 L10.63 12.9 Z"/>
+              <path class="bm-right" d="M16 16 L21.37 12.9 L21.37 19.1 L16 22.2 Z"/>
+              <path class="bm-left" d="M16 16 L10.63 12.9 L10.63 19.1 L16 22.2 Z"/>
+            </g>
+            <g class="bm-halo">
+              <path d="M16 12.9 V8.8"/>
+              <polygon points="16,6.0 14.7,8.9 17.3,8.9"/>
+              <path d="M18.685 17.55 L23.02 20.05"/>
+              <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              <g transform="translate(32 0) scale(-1 1)">
+                <path d="M18.685 17.55 L23.02 20.05"/>
+                <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              </g>
+            </g>
+            <g class="bm-tr">
+              <path d="M16 12.9 V8.8"/>
+              <polygon points="16,6.0 14.7,8.9 17.3,8.9"/>
+              <path d="M18.685 17.55 L23.02 20.05"/>
+              <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              <g transform="translate(32 0) scale(-1 1)">
+                <path d="M18.685 17.55 L23.02 20.05"/>
+                <polygon points="24.75,21.05 22.37,21.18 23.67,18.92"/>
+              </g>
+            </g>
+          </g>
+          <text class="bm-sym" x="38.6" y="17.6" text-anchor="middle">&#963;</text>
+          <path class="bm-bar" d="M33.8 21 H43.4 M33.8 24.2 H43.4"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">Applied Mechanics &amp; Bioinspired Systems</span>
+          <span class="brand__sub">Research Laboratory</span>
+        </span>
+      </a>
+
+      <ul class="nav__list" id="primary-nav">
+        <li><a class="nav__link" data-page="home" href="index.html">Home</a></li>
+        <li><a class="nav__link" data-page="research" href="research.html">Research</a></li>
+        <li><a class="nav__link" data-page="people" href="people.html">People</a></li>
+        <li><a class="nav__link" data-page="publications" href="publications.html">Publications</a></li>
+        <li><a class="nav__link" data-page="impact" href="impact.html">Impact</a></li>
+        <li><a class="nav__link" data-page="teaching" href="teaching.html">Teaching</a></li>
+        <li><a class="nav__link" data-page="resources" href="resources.html">Resources</a></li>
+        <li><a class="nav__link" data-page="news" aria-current="page" href="news.html">News</a></li>
+        <li><a class="nav__link" data-page="lab" href="lab.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__tools">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" aria-expanded="false"
+                aria-controls="primary-nav" aria-label="Open navigation menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">News and events</p>
+      <h1>News &amp; events</h1>
+      <p class="lead">
+        What the group is doing and where it has presented. The newest items also appear on
+        the <a href="index.html">home page</a>; the archive at the foot of this page lists 27
+        conference contributions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     UPCOMING EVENTS
+     This is where conferences, workshops, seminars and visits go. Duplicate one
+     <li class="event"> per entry and keep them in date order, nearest first.
+     Move an entry into the "Past events" table below once it has happened.
+     ========================================================================== -->
+<section class="section section--tight section--flush" aria-labelledby="upcoming-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Upcoming</p>
+      <h2 id="upcoming-title">Where to find us</h2>
+      <p class="lead">Conferences, workshops and seminars the group is attending or organising.</p>
+    </div>
+
+    <!-- One <li class="event"> per entry, in date order, nearest first. Move an entry
+         into the "Past events" table below once it has happened. -->
+    <ul class="event-list">
+      <li class="event">
+        <p class="event__date"><span class="event__month">Nov</span><span class="event__day">08</span><span class="event__year">2026</span></p>
+        <div>
+          <h3 class="event__title">ASME IMECE 2026: International Mechanical Engineering Congress and Exposition</h3>
+          <p class="event__where">Vancouver Convention Centre, Vancouver, Canada &middot; 8&ndash;12 November 2026</p>
+          <p class="event__what">
+            The group is attending. IMECE runs nearly twenty technical tracks, among them advanced
+            manufacturing and biomedical and biotechnology engineering, under the theme
+            &ldquo;Advancing Global Solutions: Convergence to Transformative Impact&rdquo;.
+          </p>
+          <ul class="chips">
+            <li class="chip">Attending</li>
+          </ul>
+          <p class="mt-6"><a class="link-arrow" href="https://event.asme.org/IMECE" target="_blank" rel="noopener">Conference website</a></p>
+        </div>
+      </li>
+
+      <li class="event">
+        <p class="event__date"><span class="event__month">Mar</span><span class="event__day">29</span><span class="event__year">2027</span></p>
+        <div>
+          <h3 class="event__title">BioBIS 2027: Advances in Bioengineering and Biomedical Conference</h3>
+          <p class="event__where">KFUPM, Dhahran &middot; 29&ndash;31 March 2027</p>
+          <p class="event__what">
+            Ahmed S. Dalaq serves as a Technical Program Chair. The conference is organised by the
+            Bioengineering Department and the IRC for Biosystems and Machines at KFUPM; extended
+            two-page abstracts are due 15 October 2026.
+          </p>
+          <ul class="chips">
+            <li class="chip chip--alt">Technical Program Chair</li>
+            <li class="chip">Hosted at KFUPM</li>
+          </ul>
+          <p class="mt-6"><a class="link-arrow" href="https://bio-bis.com/en/committees" target="_blank" rel="noopener">Conference committee</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     NEWS
+     Keep the newest at the top. The four newest also appear on the home page,
+     so update both, or delete the block on the home page and link here instead.
+     ========================================================================== -->
+<section class="section section--alt" aria-labelledby="news-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Updates</p>
+      <h2 id="news-title">News</h2>
+    </div>
+
+    <ul class="detail-list">
+      <li>
+        <span class="meta">2026&ndash;2027</span>
+        <strong>Conference service.</strong> Ahmed S. Dalaq is a Technical Program Chair for
+        <a href="https://bio-bis.com/en/committees" target="_blank" rel="noopener">BioBIS 2027</a>,
+        the Advances in Bioengineering and Biomedical Conference hosted by KFUPM in March 2027.
+      </li>
+      <li>
+        <span class="meta">2026</span>
+        <strong>Appointment.</strong> Ahmed S. Dalaq becomes Acting Director of the Interdisciplinary
+        Research Center for Biosystems and Machines at KFUPM.
+        <a href="people.html">Meet the group</a>
+      </li>
+      <li>
+        <span class="meta">2026</span>
+        <strong>New grant.</strong> A project with the IRC for Biosystems and Machines to rebuild
+        transtibial prosthetic design around digitalisation and generative design.
+        <a href="research.html#rp-prosthetic">Project</a>
+      </li>
+      <li>
+        <span class="meta">2026</span>
+        <strong>New paper.</strong> An origami-inspired unit cell composed of intersecting Kresling
+        springs is out in <em>Engineering Structures</em>.
+        <a href="https://doi.org/10.1016/j.engstruct.2026.123454" target="_blank" rel="noopener">DOI</a>
+      </li>
+      <li>
+        <span class="meta">2026</span>
+        <strong>New paper.</strong> On the origins of toughness in <em>Corymbia calophylla</em>
+        (Marri tree) nuts, in <em>Advanced Science</em>.
+        <a href="https://doi.org/10.1002/advs.202515273" target="_blank" rel="noopener">DOI</a>
+      </li>
+      <li>
+        <span class="meta">2026</span>
+        <strong>Ethics.</strong> A colour-coded triage method for the ethical matrix is published in
+        the <em>Journal of Agricultural and Environmental Ethics</em>.
+        <a href="https://doi.org/10.1007/s10806-026-09986-4" target="_blank" rel="noopener">DOI</a>
+      </li>
+      <li>
+        <span class="meta">2025</span>
+        <strong>Patent filed.</strong> A United States provisional application on the artificial
+        lung for direct air carbon capture, now moving to a non-provisional filing.
+        <a href="impact.html#patents">Patents</a>
+      </li>
+      <li>
+        <span class="meta">2025</span>
+        <strong>National grant.</strong> Funding from Saudi Arabia's Research, Development and
+        Innovation Authority for the artificial lung project, with the group as Co-Investigator.
+        <a href="research.html#rp-lung">Project</a>
+      </li>
+      <li>
+        <span class="meta">2025</span>
+        <strong>Two new projects.</strong> Sensitivity mapping of the ear canal and origami-based
+        cartridges for automatic biotic monitoring both start at the IRC
+        for Biosystems and Machines. <a href="research.html">Running projects</a>
+      </li>
+      <li>
+        <span class="meta">2025</span>
+        <strong>Talk.</strong> Nonfolding origami lattice for energy dissipation and strength,
+        presented at the 12th European Solid Mechanics Conference in Lyon.
+      </li>
+      <li>
+        <span class="meta">2024</span>
+        <strong>Award.</strong> Outstanding department service, Bioengineering Department, KFUPM
+        (2023&ndash;2024).
+      </li>
+      <li>
+        <span class="meta">2023</span>
+        <strong>Session chair.</strong> Ahmed S. Dalaq chaired a session at PowerMEMS 2023 in
+        Abu Dhabi, where the group also presented on AI-based shape optimisation of galloping
+        micro-power generators.
+      </li>
+      <li>
+        <span class="meta">Standing</span>
+        <strong>Open positions.</strong> PhD and postdoctoral opportunities are open on a rolling
+        basis. <a href="people.html#join">Details</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PAST EVENTS
+     A compact archive. Move entries up from "Upcoming" once they have happened.
+     ========================================================================== -->
+<section class="section section--tight" aria-labelledby="past-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Archive</p>
+      <h2 id="past-title">Past events</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption class="visually-hidden">Conferences and events the group has attended, with our contribution</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Event</th>
+            <th scope="col">Place</th>
+            <th scope="col">Our contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Conference contributions from the CV, newest first. -->
+          <tr><td>2025</td><td>12th European Solid Mechanics Conference</td><td>Lyon, France</td><td>Nonfolding origami lattice for energy dissipation and strength</td></tr>
+          <tr><td>2025</td><td>30th Congress of the European Society of Biomechanics</td><td>Z&uuml;rich, Switzerland</td><td>Bone-inspired lattice structures: pore size and structural performance</td></tr>
+          <tr><td>2025</td><td>Pacifichem</td><td>Honolulu, USA</td><td>Two submissions on nonfolding origami lattices and self-healing ferroelastic crystals</td></tr>
+          <tr><td>2024</td><td>SMN 2024</td><td>Sharjah, UAE</td><td>Interlocking efficacy in topologically interlocked materials</td></tr>
+          <tr><td>2024</td><td>INTER-NOISE / NOISE-CON</td><td>&ndash;</td><td>Virtual and experimental physical comfort testers for earplugs</td></tr>
+          <tr><td>2024</td><td>10th World Congress on Mechanical, Chemical and Material Engineering</td><td>&ndash;</td><td>Compression and torsion of Kresling origami springs</td></tr>
+          <tr><td>2023</td><td>PowerMEMS 2023</td><td>Abu Dhabi, UAE</td><td>Session chair; paper on AI-based shape optimisation of galloping micro-power generators</td></tr>
+          <tr><td>2023</td><td>Third International Nonlinear Dynamics Conference (NODYCON)</td><td>Rome, Italy</td><td>Two contributions on an origami-inspired energy converter</td></tr>
+          <tr><td>2023</td><td>Structural Nonlinear Dynamics and Diagnosis (CSNDD)</td><td>Morocco</td><td>Origami-inspired energy conversion for impact mitigation and harvesting</td></tr>
+          <tr><td>2023</td><td>Canadian Acoustics</td><td>Canada</td><td>Static mechanical pressure induced by roll-down foam earplugs</td></tr>
+          <tr><td>2022</td><td>11th European Solid Mechanics Conference</td><td>Galway, Ireland</td><td>Energy-absorbing origami cushions; energy-harvesting body optimisation with machine learning</td></tr>
+          <tr><td>2022</td><td>16e Congr&egrave;s Fran&ccedil;ais d'Acoustique</td><td>Marseille, France</td><td>Mechanical pressure of foam earplugs on artificial ear canals</td></tr>
+          <tr><td>2021</td><td>ASME SMASIS</td><td>&ndash;</td><td>Modelling and characterisation of 3D-printed origami-inspired springs</td></tr>
+          <tr><td>2019</td><td>CSME International Congress</td><td>London, Ontario, Canada</td><td>Manipulating the architecture of beams for high toughness and strength</td></tr>
+          <tr><td>2018</td><td>TMS Annual Meeting</td><td>Arizona, USA</td><td>Deformation and failure of bioinspired segmented beams and plates</td></tr>
+          <tr><td>2015</td><td>ASME; GSRC; EEEIC; TechConnect World</td><td>UAE and USA</td><td>Six contributions on minimal-surface composites, carbon nanostructured papers and ocean energy</td></tr>
+          <tr><td>2014</td><td>ASME IMECE</td><td>&ndash;</td><td>Two contributions on architectured interpenetrating phase composites</td></tr>
+          <tr><td>2013</td><td>SES Annual Technical Meeting / ASME-AMD Summer Meeting</td><td>Providence, RI, USA</td><td>Mesoscale conductivity and resistivity tensors in random checkerboards</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight section--alt">
+  <div class="container container--narrow center">
+    <h2>Organising something we should know about?</h2>
+    <p class="lead">
+      We are happy to give seminars, host visitors and co-organise sessions on architected and
+      bioinspired mechanics.
+    </p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn--primary" href="lab.html#contact">Invite the lab</a>
+      <a class="btn btn--ghost" href="research.html">Running projects</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==========================================================================
+     FOOTER: identical on every page.
+     Institution, address and profile URLs are set. Only the GitHub URL is still a placeholder.
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div>
+        <p class="footer__name">Lab of Applied Mechanics and Bioinspired Systems</p>
+        <p class="footer__meta">
+
+          Bioengineering Department &middot; Building 7<br>
+          IRC for Biosystems and Machines &middot; Buildings 7 and 15 &middot; Dhahran Techno Valley<br>
+          KFUPM, Dhahran, Saudi Arabia
+        </p>
+        <ul class="social">
+          <li><a href="https://scholar.google.com/citations?user=P7IoxboAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar profile"><svg class="icon" aria-hidden="true"><use href="#i-scholar"></use></svg></a></li>
+          <li><a href="https://www.researchgate.net/profile/Ahmed-Dalaq" target="_blank" rel="noopener" aria-label="ResearchGate profile"><svg class="icon" aria-hidden="true"><use href="#i-rg"></use></svg></a></li>
+          <li><a href="https://orcid.org/0000-0002-3070-4215" target="_blank" rel="noopener" aria-label="ORCID record"><svg class="icon" aria-hidden="true"><use href="#i-orcid"></use></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/ahmeddalaq" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li>
+          <li><a href="mailto:ahmed.dalaq@kfupm.edu.sa" aria-label="Email the lab"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Research</h2>
+        <ul>
+          <li><a href="research.html#bioinspired-mechanics">Bioinspired mechanics</a></li>
+          <li><a href="research.html#architected-materials">Architected materials</a></li>
+          <li><a href="research.html#adaptive-systems">Adaptive systems</a></li>
+          <li><a href="research.html#computational-mechanics">Computational mechanics</a></li>
+          <li><a href="research.html#manufacturing-sustainability">Manufacturing &amp; sustainability</a></li>
+          <li><a href="research.html#biomedical-systems">Biomedical systems</a></li>
+          <li><a href="research.html#ethics">Ethics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>The lab</h2>
+        <ul>
+          <li><a href="people.html">People</a></li>
+          <li><a href="news.html">News &amp; events</a></li>
+          <li><a href="impact.html">Impact &amp; innovation</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resources.html">Open research</a></li>
+          <li><a href="lab.html">Facilities</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2>Join us</h2>
+        <ul>
+          <li><a href="people.html#phd">PhD opportunity</a></li>
+          <li><a href="people.html#postdoc">Postdoc opportunity</a></li>
+          <li><a href="lab.html#contact">Contact</a></li>
+          <li><a href="mailto:ahmed.dalaq@kfupm.edu.sa">ahmed.dalaq@kfupm.edu.sa</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span data-year>2026</span> Lab of Applied Mechanics and Bioinspired Systems. All rights reserved.</p>
+      <p>Static site &middot; no trackers &middot; <a href="#main">back to top</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
